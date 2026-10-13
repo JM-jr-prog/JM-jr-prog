@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/banner.svg" width="100%" alt="Banner" />
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1200&color=C77DFF&center=true&vCenter=true&width=560&lines=Hey,+I'm+JHON MOISES CABILING+%F0%9F%91%BE;BS+Computer+Science+student;Learning+by+building+real+things;Currently+leveling+up+in+Java" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1200&color=C77DFF&center=true&vCenter=true&width=560&lines=Hey,+I'm+JHON+MOISES+CABILING+%F0%9F%91%BE;BS+Computer+Science+student;Learning+by+building+real+things;Currently+leveling+up+in+Java" alt="Typing intro" />
 
   <br/>
 
