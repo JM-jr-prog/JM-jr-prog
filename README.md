@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/banner.svg" width="100%" alt="Banner" />
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1200&color=C77DFF&center=true&vCenter=true&width=560&lines=Hey,+I'm+YOUR+NAME+%F0%9F%91%BE;BS+Computer+Science+student;Learning+by+building+real+things;Currently+leveling+up+in+Java" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1200&color=C77DFF&center=true&vCenter=true&width=560&lines=Hey,+I'm+JHON MOISES CABILING+%F0%9F%91%BE;BS+Computer+Science+student;Learning+by+building+real+things;Currently+leveling+up+in+Java" alt="Typing intro" />
 
   <br/>
 
@@ -36,22 +36,11 @@ so this profile is a public log of what I'm learning and building.
 
 ## `> ls ./featured-projects`
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🗡️ MindQuest</h3>
-      <p>A Java study game where monsters quiz you on your own notes. Upload a lesson, battle orcs, elves, liches and werewolves, and win by answering correctly.</p>
-      <p><code>Java</code> <code>OOP</code> <code>Game Logic</code></p>
-      <a href="https://github.com/YOURUSERNAME/MindQuest">View repo →</a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📡 OffGrid</h3>
-      <p>An offline, local-AI emergency info hub for communities during outages. Built for the AppBuildersPH 2026 hackathon.</p>
-      <p><code>Local AI</code> <code>Offline-first</code> <code>Hackathon</code></p>
-      <a href="https://github.com/YOURUSERNAME/OffGrid">View repo →</a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <a href="https://github.com/JM-jr-prog/jr-projects">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=JM-jr-prog&repo=jr-projects&hide_border=true&bg_color=0d0d1a&title_color=c77dff&icon_color=ff5ce1&text_color=e9d5ff" alt="jr-projects" />
+  </a>
+</div>
 
 <br/>
 
