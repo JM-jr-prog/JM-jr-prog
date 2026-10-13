@@ -79,7 +79,7 @@
     <text x="450" y="128" text-anchor="middle" font-family="Courier New, monospace"
           font-weight="bold" font-size="58" letter-spacing="4" fill="url(#title)"
           stroke="#ff5ce1" stroke-width="1" stroke-opacity=".6"
-          filter="url(#glow)">YOUR NAME</text>
+          filter="url(#glow)">JHON MOISES CABILING</text>
     <rect x="270" y="196" width="360" height="40" rx="6" fill="#05010d" opacity=".78"/>
     <text x="450" y="222" text-anchor="middle" font-family="Courier New, monospace"
           font-size="17" letter-spacing="3" fill="#e9b3ff">&gt; CS STUDENT · BUILDING IN PUBLIC<tspan class="blink" fill="#ff5ce1">_</tspan></text>
