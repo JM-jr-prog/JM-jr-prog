@@ -1,88 +1,215 @@
 <svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#05010d"/>
-      <stop offset="60%" stop-color="#1a0630"/>
-      <stop offset="100%" stop-color="#3b0a63"/>
+      <stop offset="0" stop-color="#04050b"/>
+      <stop offset=".6" stop-color="#0c0e1c"/>
+      <stop offset="1" stop-color="#1b1522"/>
     </linearGradient>
-    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e9b3ff"/>
-      <stop offset="50%" stop-color="#b44cff"/>
-      <stop offset="100%" stop-color="#7a1fd1"/>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0a0d"/>
+      <stop offset="1" stop-color="#040305"/>
     </linearGradient>
-    <linearGradient id="title" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#d7a8ff"/>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a1e30"/>
+      <stop offset="1" stop-color="#2a2f48"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a97b60"/>
+      <stop offset="1" stop-color="#c79677"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".55"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <clipPath id="card"><rect width="900" height="300" rx="20"/></clipPath>
-    <clipPath id="sunclip"><rect x="0" y="40" width="900" height="130"/></clipPath>
   </defs>
   <style>
-    .star{fill:#fff;animation:tw 3s infinite ease-in-out}
-    .d1{animation-delay:.8s}.d2{animation-delay:1.6s}.d3{animation-delay:2.3s}
-    @keyframes tw{0%,100%{opacity:.1}50%{opacity:1}}
-    .grid{animation:move 1.2s linear infinite}
-    @keyframes move{from{transform:translateY(0)}to{transform:translateY(24px)}}
+    .star{fill:#fff;animation:tw 4s infinite ease-in-out}
+    .d1{animation-delay:1s}.d2{animation-delay:2s}.d3{animation-delay:3s}
+    @keyframes tw{0%,100%{opacity:.08}50%{opacity:.7}}
+    .w{fill:#ffcf8a;opacity:.55;animation:wf 6s infinite ease-in-out}
+    .w2{animation-delay:2s}.w3{animation-delay:4s}
+    @keyframes wf{0%,100%{opacity:.55}50%{opacity:.15}}
+    .lamp{animation:lp 5s ease-in-out infinite}
+    @keyframes lp{0%,100%{opacity:1}45%{opacity:.85}50%{opacity:.95}}
+    .lap{animation:lg 2.5s ease-in-out infinite}
+    @keyframes lg{0%,100%{opacity:.10}50%{opacity:.2}}
+    .steam{fill:none;stroke:#e8d9bf;stroke-width:1.5;stroke-linecap:round;opacity:0;animation:st 3s ease-out infinite}
+    .st2{animation-delay:1.5s}
+    @keyframes st{0%{opacity:.5;transform:translateY(0)}100%{opacity:0;transform:translateY(-9px)}}
+    .smoke{fill:#9a948c;opacity:0;transform-box:fill-box;transform-origin:center;animation:sm 4s ease-out infinite}
+    .s2{animation-delay:1.3s}.s3{animation-delay:2.6s}
+    @keyframes sm{0%{opacity:.35;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(-22px,-20px) scale(2.2)}}
     .blink{animation:bl 1s steps(2) infinite}
     @keyframes bl{50%{opacity:0}}
-    .pulse{animation:pu 4s ease-in-out infinite}
-    @keyframes pu{0%,100%{opacity:.85}50%{opacity:1}}
+    .type{animation:tp 1.4s ease-in-out infinite}
+    @keyframes tp{0%,100%{transform:translateY(0)}50%{transform:translateY(-1px)}}
   </style>
 
   <g clip-path="url(#card)">
     <rect width="900" height="300" fill="url(#sky)"/>
 
-    <circle class="star" cx="70" cy="40" r="1.5"/>
-    <circle class="star d1" cx="160" cy="95" r="1"/>
-    <circle class="star d2" cx="260" cy="30" r="1.5"/>
-    <circle class="star d3" cx="340" cy="75" r="1"/>
-    <circle class="star" cx="560" cy="35" r="1.5"/>
-    <circle class="star d2" cx="640" cy="90" r="1"/>
-    <circle class="star d1" cx="740" cy="45" r="1.5"/>
-    <circle class="star d3" cx="835" cy="85" r="1"/>
-    <circle class="star d2" cx="450" cy="22" r="1"/>
+    <!-- stars + faint crescent moon -->
+    <circle class="star" cx="470" cy="30" r="1.2"/>
+    <circle class="star d1" cx="560" cy="62" r="1"/>
+    <circle class="star d2" cx="650" cy="26" r="1.3"/>
+    <circle class="star d3" cx="720" cy="50" r="1"/>
+    <circle class="star" cx="870" cy="90" r="1"/>
+    <circle class="star d2" cx="300" cy="36" r="1"/>
+    <circle class="star d1" cx="60" cy="40" r="1.2"/>
+    <circle cx="800" cy="52" r="14" fill="#cfd6e8" opacity=".45"/>
+    <circle cx="807" cy="48" r="13" fill="#080a14"/>
 
-    <g clip-path="url(#sunclip)" class="pulse">
-      <circle cx="450" cy="150" r="100" fill="url(#sun)" filter="url(#glow)"/>
-      <rect x="340" y="118" width="220" height="3" fill="#05010d"/>
-      <rect x="340" y="132" width="220" height="5" fill="#05010d"/>
-      <rect x="340" y="148" width="220" height="7" fill="#05010d"/>
+    <!-- distant skyline (dark silhouettes) -->
+    <g fill="#0a0c18">
+      <rect x="440" y="165" width="38" height="70"/>
+      <rect x="478" y="135" width="28" height="100"/>
+      <rect x="506" y="175" width="44" height="60"/>
+      <rect x="550" y="115" width="30" height="120"/>
+      <rect x="580" y="155" width="40" height="80"/>
+      <rect x="620" y="140" width="26" height="95"/>
+      <rect x="646" y="170" width="46" height="65"/>
+      <rect x="692" y="125" width="30" height="110"/>
+      <rect x="722" y="160" width="40" height="75"/>
+      <rect x="762" y="145" width="28" height="90"/>
+      <rect x="790" y="165" width="44" height="70"/>
+      <rect x="834" y="135" width="30" height="100"/>
+      <rect x="864" y="171" width="36" height="64"/>
+      <rect x="563" y="100" width="2" height="15"/>
+      <rect x="705" y="110" width="2" height="15"/>
+    </g>
+    <!-- a few tiny lit windows -->
+    <rect class="w" x="486" y="145" width="3" height="4"/>
+    <rect class="w w2" x="560" y="130" width="3" height="4"/>
+    <rect class="w w3" x="566" y="162" width="3" height="4"/>
+    <rect class="w" x="630" y="155" width="3" height="4"/>
+    <rect class="w w2" x="702" y="140" width="3" height="4"/>
+    <rect class="w w3" x="708" y="178" width="3" height="4"/>
+    <rect class="w" x="770" y="160" width="3" height="4"/>
+    <rect class="w w2" x="842" y="150" width="3" height="4"/>
+    <rect class="w w3" x="512" y="200" width="3" height="4"/>
+    <rect class="w" x="598" y="188" width="3" height="4"/>
+
+    <!-- low haze at the horizon -->
+    <rect x="0" y="195" width="900" height="40" fill="#2a1a22" opacity=".25"/>
+
+    <!-- ground -->
+    <rect x="0" y="235" width="900" height="65" fill="url(#ground)"/>
+    <line x1="0" y1="235" x2="900" y2="235" stroke="#ffcf8a" stroke-opacity=".12" stroke-width="2"/>
+    <ellipse cx="570" cy="237" rx="100" ry="5" fill="#000" opacity=".6"/>
+
+    <!-- streetlamp: the one real light source -->
+    <g class="lamp">
+      <polygon points="805,112 825,112 880,235 740,235" fill="#ffcf8a" opacity=".09"/>
+      <ellipse cx="812" cy="236" rx="85" ry="8" fill="#ffcf8a" opacity=".14"/>
+    </g>
+    <line x1="815" y1="235" x2="815" y2="112" stroke="#1b1a22" stroke-width="4"/>
+    <path d="M815 114 Q815 104 800 106" fill="none" stroke="#1b1a22" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="788,104 810,104 806,110 792,110" fill="#2a2630"/>
+    <ellipse class="lamp" cx="799" cy="111" rx="5" ry="3" fill="#ffcf8a" filter="url(#glow)"/>
+
+    <!-- cafe racer (dark, rim-lit) -->
+    <g transform="translate(-70,0)">
+      <polygon points="706,158 790,134 790,184" fill="#ffcf8a" opacity=".06"/>
+      <line x1="570" y1="205" x2="626" y2="184" stroke="#8a7d68" stroke-width="4" stroke-linecap="round"/>
+      <path d="M634 200 L566 198" stroke="#5f5c60" stroke-width="5" stroke-linecap="round"/>
+      <rect x="622" y="176" width="44" height="30" rx="4" fill="#14110f" stroke="#6b4a2a"/>
+      <path d="M620 164 Q626 142 658 144 Q678 146 681 162 L620 166 Z" fill="#7a2f10"/>
+      <path d="M632 150 Q650 147 668 152" fill="none" stroke="#c9b79a" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/>
+      <path d="M564 160 Q572 147 606 152 L622 162 L586 168 Z" fill="#0d0a08"/>
+      <line x1="688" y1="152" x2="710" y2="205" stroke="#8a7d68" stroke-width="4" stroke-linecap="round"/>
+      <line x1="684" y1="150" x2="698" y2="146" stroke="#8a7d68" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="698" cy="158" r="7" fill="#ffcf8a" opacity=".85" filter="url(#glow)"/>
+      <g fill="none">
+        <circle cx="570" cy="205" r="30" stroke="#8a7d68" stroke-width="4"/>
+        <circle cx="570" cy="205" r="22" stroke="#3d352c"/>
+        <circle cx="710" cy="205" r="30" stroke="#8a7d68" stroke-width="4"/>
+        <circle cx="710" cy="205" r="22" stroke="#3d352c"/>
+      </g>
+      <g stroke="#3d352c" stroke-width="1">
+        <line x1="570" y1="183" x2="570" y2="227"/><line x1="548" y1="205" x2="592" y2="205"/>
+        <line x1="554" y1="189" x2="586" y2="221"/><line x1="586" y1="189" x2="554" y2="221"/>
+        <line x1="710" y1="183" x2="710" y2="227"/><line x1="688" y1="205" x2="732" y2="205"/>
+        <line x1="694" y1="189" x2="726" y2="221"/><line x1="726" y1="189" x2="694" y2="221"/>
+      </g>
+      <circle cx="570" cy="205" r="4" fill="#8a7d68"/>
+      <circle cx="710" cy="205" r="4" fill="#8a7d68"/>
+      <circle class="smoke" cx="562" cy="196" r="3"/>
+      <circle class="smoke s2" cx="562" cy="196" r="3"/>
+      <circle class="smoke s3" cx="562" cy="196" r="3"/>
     </g>
 
-    <rect x="0" y="170" width="900" height="130" fill="#0a0216"/>
-    <line x1="0" y1="170" x2="900" y2="170" stroke="#e070ff" stroke-width="2" filter="url(#glow)"/>
+    <!-- laptop glow -->
+    <circle class="lap" cx="738" cy="198" r="34" fill="#78c8ff"/>
 
-    <g stroke="#b44cff" stroke-opacity=".55" stroke-width="1">
-      <line x1="450" y1="170" x2="-300" y2="300"/>
-      <line x1="450" y1="170" x2="-80" y2="300"/>
-      <line x1="450" y1="170" x2="130" y2="300"/>
-      <line x1="450" y1="170" x2="300" y2="300"/>
-      <line x1="450" y1="170" x2="450" y2="300"/>
-      <line x1="450" y1="170" x2="600" y2="300"/>
-      <line x1="450" y1="170" x2="770" y2="300"/>
-      <line x1="450" y1="170" x2="980" y2="300"/>
-      <line x1="450" y1="170" x2="1200" y2="300"/>
-    </g>
-    <g class="grid" stroke="#b44cff" stroke-opacity=".55" stroke-width="1">
-      <line x1="0" y1="176" x2="900" y2="176"/>
-      <line x1="0" y1="184" x2="900" y2="184"/>
-      <line x1="0" y1="196" x2="900" y2="196"/>
-      <line x1="0" y1="212" x2="900" y2="212"/>
-      <line x1="0" y1="234" x2="900" y2="234"/>
-      <line x1="0" y1="262" x2="900" y2="262"/>
-    </g>
+    <!-- the guy: sitting on the ground, hunched over his laptop, facing the bike -->
+    <ellipse cx="735" cy="237" rx="55" ry="3.5" fill="#000" opacity=".45"/>
 
-    <text x="450" y="128" text-anchor="middle" font-family="Courier New, monospace"
-          font-weight="bold" font-size="58" letter-spacing="4" fill="url(#title)"
-          stroke="#ff5ce1" stroke-width="1" stroke-opacity=".6"
-          filter="url(#glow)">JHON MOISES CABILING</text>
-    <rect x="270" y="196" width="360" height="40" rx="6" fill="#05010d" opacity=".78"/>
-    <text x="450" y="222" text-anchor="middle" font-family="Courier New, monospace"
-          font-size="17" letter-spacing="3" fill="#e9b3ff">&gt; CS STUDENT · BUILDING IN PUBLIC<tspan class="blink" fill="#ff5ce1">_</tspan></text>
+    <!-- far leg + shoe -->
+    <line x1="774" y1="230" x2="752" y2="218" stroke="#0e1322" stroke-width="11" stroke-linecap="round"/>
+    <line x1="752" y1="218" x2="748" y2="232" stroke="#0e1322" stroke-width="9" stroke-linecap="round"/>
+    <path d="M738 235 L750 231 Q753 231 753 234 L754 236 L738 236 Z" fill="#6f695e"/>
+
+    <!-- torso (hoodie) with warm rim light from the lamp -->
+    <path d="M764 230 L783 230 Q791 210 781 190 Q775 180 767 180 Q759 184 759 200 Q761 218 764 230 Z" fill="url(#hoodie)"/>
+    <ellipse cx="773" cy="181" rx="8" ry="5" fill="#2a2f48"/>
+    <path d="M783 230 Q791 210 781 190" fill="none" stroke="#ffcf8a" stroke-opacity=".4" stroke-width="1.5"/>
+    <path d="M762 214 Q767 218 765 228" fill="none" stroke="#12141f" stroke-opacity=".6" stroke-width="1"/>
+
+    <!-- near leg (jeans) + sneaker -->
+    <line x1="772" y1="229" x2="744" y2="214" stroke="#151c30" stroke-width="12" stroke-linecap="round"/>
+    <line x1="744" y1="214" x2="738" y2="232" stroke="#151c30" stroke-width="10" stroke-linecap="round"/>
+    <path d="M726 235 L742 230 Q745 230 746 233 L747 236 L726 236 Z" fill="#9a9487"/>
+    <rect x="726" y="234" width="21" height="2" fill="#2e2a24"/>
+
+    <!-- laptop on his knees (side view) -->
+    <rect x="726" y="209" width="32" height="3.5" rx="1.5" fill="#34343e"/>
+    <polygon points="726,209 718,181 722,180 729,208" fill="#1d1d26"/>
+    <line x1="722" y1="180" x2="729" y2="208" stroke="#78c8ff" stroke-opacity=".75"/>
+
+    <!-- neck + head (profile) -->
+    <path d="M759 172 L766 172 L768 182 L760 182 Z" fill="#a47659"/>
+    <ellipse cx="758" cy="164" rx="10" ry="11.5" fill="url(#skin)"/>
+    <path d="M748 163 Q742 168 748 170 Z" fill="#b98a6c"/>
+    <ellipse cx="751" cy="163" rx="1.1" ry="1.2" fill="#1a1210"/>
+    <path d="M750 173 Q754 175 757 173" fill="none" stroke="#7a5440" stroke-width="1"/>
+    <ellipse cx="763" cy="165" rx="2.5" ry="3.5" fill="#9a6e55"/>
+    <ellipse class="lap" cx="751" cy="166" rx="5" ry="8" fill="#78c8ff"/>
+    <path d="M769 163 Q773 168 769 172 Q766 168 767 163 Z" fill="#15161f"/>
+    <!-- beanie -->
+    <path d="M747 160 Q746 148 758 148 Q771 149 771 161 Q759 156 747 160 Z" fill="#7a2f10"/>
+    <path d="M746 159 Q759 153 771 160 L771 163 Q759 157 746 162 Z" fill="#5c230c"/>
+    <path d="M762 149 Q769 150 771 158" fill="none" stroke="#ffcf8a" stroke-opacity=".35" stroke-width="1.2"/>
+
+    <!-- arm: shoulder -> elbow -> hand on the keys -->
+    <line x1="768" y1="186" x2="774" y2="209" stroke="#252a42" stroke-width="8" stroke-linecap="round"/>
+    <line x1="774" y1="209" x2="754" y2="207" stroke="#2a2f48" stroke-width="6.5" stroke-linecap="round"/>
+    <ellipse class="type" cx="752" cy="206.5" rx="5" ry="3" fill="#b98a6c"/>
+
+    <!-- mug -->
+    <rect x="799" y="222" width="9" height="10" rx="1.5" fill="#8a7d68"/>
+    <path d="M808 225 Q813 225 813 228 Q813 231 808 231" fill="none" stroke="#8a7d68" stroke-width="1.5"/>
+    <path class="steam" d="M801 220 Q799 215 802 211"/>
+    <path class="steam st2" d="M806 220 Q804 215 807 211"/>
+
+    <!-- left text block -->
+    <text x="38" y="150" font-family="Courier New, monospace" font-weight="bold" font-size="56"
+          fill="#e0a56a" filter="url(#glow)" opacity=".9">&gt;<tspan class="blink">_</tspan></text>
+    <text x="125" y="92" font-family="Courier New, monospace" font-size="10" textLength="250"
+          lengthAdjust="spacing" fill="#8a7a66">BUILD / LEARN / IMPROVE / REPEAT</text>
+    <text x="125" y="128" font-family="Courier New, monospace" font-weight="bold" font-size="34"
+          textLength="290" lengthAdjust="spacing" fill="#f1dcc0">Moimoi Cabiling</text>
+    <text x="125" y="154" font-family="Courier New, monospace" font-size="14" textLength="250"
+          lengthAdjust="spacing" fill="#c9a37a">BS Computer Science Student</text>
+    <text x="125" y="178" font-family="Courier New, monospace" font-size="12" textLength="200"
+          lengthAdjust="spacing" fill="#8a7a66">Turning ideas into code &lt;/&gt;</text>
+
+    <!-- vignette keeps it dark and cozy -->
+    <rect width="900" height="300" fill="url(#vignette)"/>
   </g>
-  <rect x="1" y="1" width="898" height="298" rx="20" fill="none" stroke="#b44cff" stroke-width="2" filter="url(#glow)"/>
+  <rect x="1" y="1" width="898" height="298" rx="20" fill="none" stroke="#ffcf8a" stroke-opacity=".25" stroke-width="2"/>
 </svg>
