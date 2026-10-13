@@ -14,9 +14,9 @@
 ## `> whoami`
 
 ```text
-name      : YOUR NAME
+name      : Jhon Moises A. Cabiling
 school    : Batangas State University (BS Computer Science, 2nd year)
-focus     : Java · problem solving · building useful things
+focus     : Java · Python · problem solving · building useful things
 goal      : full-stack + AI engineer
 status    : learning, shipping, repeating
 ```
