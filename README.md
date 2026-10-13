@@ -76,8 +76,8 @@ so this profile is a public log of what I'm learning and building.
 ## `> connect`
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/YOURLINK"><img src="https://img.shields.io/badge/LinkedIn-7B1FA2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:you@email.com"><img src="https://img.shields.io/badge/Email-ff2bd6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/jm-cabiling"><img src="https://img.shields.io/badge/LinkedIn-7B1FA2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:jmcabiling.dev@gmail.com"><img src="https://img.shields.io/badge/Email-ff2bd6?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </div>
 
 <br/>
