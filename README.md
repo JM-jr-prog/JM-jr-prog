@@ -5,8 +5,8 @@
 
   <br/>
 
-  <img src="https://komarev.com/ghpvc/?username=YOURUSERNAME&label=PROFILE+VIEWS&color=7B1FA2&style=flat-square" alt="views" />
-  <img src="https://img.shields.io/github/followers/YOURUSERNAME?label=FOLLOWERS&logo=github&color=9C27B0&labelColor=0d0d1a&style=flat-square" alt="followers" />
+  <img src="https://komarev.com/ghpvc/?username=JM-jr-prog&label=PROFILE+VIEWS&color=7B1FA2&style=flat-square" alt="views" />
+  <img src="https://img.shields.io/github/followers/JM-jr-prog?label=FOLLOWERS&logo=github&color=9C27B0&labelColor=0d0d1a&style=flat-square" alt="followers" />
 </div>
 
 <br/>
