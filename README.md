@@ -59,6 +59,14 @@ so this profile is a public log of what I'm learning and building.
 
 <br/>
 
+## `> ride --contributions`
+
+<div align="center">
+  <img src="assets/moto-contrib.svg" width="100%" alt="Motorcycle riding across my contribution graph" />
+</div>
+
+<br/>
+
 ## `> stats`
 
 <div align="center">
