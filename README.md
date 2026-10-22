@@ -38,13 +38,13 @@ so this profile is a public log of what I'm learning and building.
 
 <div align="center">
   <a href="https://github.com/JM-jr-prog/EcoByte-Tracker-python">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=JM-jr-prog&repo=jr-projects&hide_border=true&bg_color=0d0b10&title_color=ff8a3d&icon_color=d35400&text_color=e8d9bf" alt="jr-projects" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=JM-jr-prog&repo=EcoByte-Tracker-python&hide_border=true&bg_color=0d0b10&title_color=ff8a3d&icon_color=d35400&text_color=e8d9bf" alt="EcoByte-Tracker-python" />
   </a>
 </div>
 
 <div align="center">
   <a href="https://github.com/JM-jr-prog/MediVault-python">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=JM-jr-prog&repo=jr-projects&hide_border=true&bg_color=0d0b10&title_color=ff8a3d&icon_color=d35400&text_color=e8d9bf" alt="jr-projects" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=JM-jr-prog&repo=MediVault-python&hide_border=true&bg_color=0d0b10&title_color=ff8a3d&icon_color=d35400&text_color=e8d9bf" alt="MediVault-python" />
   </a>
 </div>
 
