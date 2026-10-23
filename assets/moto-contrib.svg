@@ -2,7 +2,7 @@
 <style>text { font-family: 'Fira Code', ui-monospace, Menlo, Consolas, monospace; }</style>
 <rect width="892" height="176" rx="10" fill="#0d0b10"/>
 <text x="24" y="27" font-size="13" font-weight="700" fill="#ff8a3d">&gt; ride --contributions</text>
-<text x="868" y="27" font-size="12" fill="#e8d9bf" text-anchor="end">50 contributions · 11 active days</text>
+<text x="868" y="27" font-size="12" fill="#e8d9bf" text-anchor="end">53 contributions · 11 active days</text>
 <rect x="24" y="44" width="12" height="12" rx="2.5" fill="#17111f"/>
 <rect x="24" y="60" width="12" height="12" rx="2.5" fill="#17111f"/>
 <rect x="24" y="76" width="12" height="12" rx="2.5" fill="#17111f"/>
@@ -372,7 +372,7 @@
 <rect x="856" y="76" width="12" height="12" rx="2.5" fill="#17111f"/>
 <rect x="856" y="92" width="12" height="12" rx="2.5" fill="#17111f"/>
 <rect x="856" y="108" width="12" height="12" rx="2.5" fill="#ff8a3d"><animate attributeName="fill" dur="31.70s" repeatCount="indefinite" keyTimes="0.00000;0.63512;0.63575;0.64900;0.66982;0.94006;0.97792;1.00000" values="#ff8a3d;#ff8a3d;#fff1d9;#c2531f;#17111f;#17111f;#ff8a3d;#ff8a3d"/></rect>
-<rect x="856" y="124" width="12" height="12" rx="2.5" fill="#d35400"><animate attributeName="fill" dur="31.70s" repeatCount="indefinite" keyTimes="0.00000;0.65668;0.65731;0.67056;0.69138;0.94006;0.97792;1.00000" values="#d35400;#d35400;#fff1d9;#c2531f;#17111f;#17111f;#d35400;#d35400"/></rect>
+<rect x="856" y="124" width="12" height="12" rx="2.5" fill="#ff8a3d"><animate attributeName="fill" dur="31.70s" repeatCount="indefinite" keyTimes="0.00000;0.65668;0.65731;0.67056;0.69138;0.94006;0.97792;1.00000" values="#ff8a3d;#ff8a3d;#fff1d9;#c2531f;#17111f;#17111f;#ff8a3d;#ff8a3d"/></rect>
 <g transform="translate(14.0,50.0)">
   <animateTransform attributeName="transform" type="translate" calcMode="linear" dur="31.70s" repeatCount="indefinite"
     keyTimes="0.00000;0.11356;0.13091;0.24448;0.26183;0.37539;0.39274;0.50631;0.52366;0.63722;0.65457;0.76814;0.78549;0.89905;1" values="14.0 50.0;878.0 50.0;878.0 66.0;14.0 66.0;14.0 82.0;878.0 82.0;878.0 98.0;14.0 98.0;14.0 114.0;878.0 114.0;878.0 130.0;14.0 130.0;14.0 146.0;878.0 146.0;878.0 146.0"/>
