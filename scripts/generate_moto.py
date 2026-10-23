@@ -23,16 +23,17 @@ PAD_X, PAD_TOP = 24, 44
 
 # Theme (matches the black + purple + orange profile)
 BG = "#0d0b10"
-COLORS = ["#1a1424", "#3d2a5c", "#6b3fa0", "#c2531f", "#ff8a3d"]
+COLORS = ["#17111f", "#5b3a91", "#8e4ec6", "#d35400", "#ff8a3d"]
 EMPTY = COLORS[0]
 FLASH = "#fff1d9"
+EMBER = "#c2531f"
 TEXT = "#e8d9bf"
 ORANGE = "#ff8a3d"
 
 # Ride timing
 SPEED = 240   # px per second along a row
 TURN = 0.55   # seconds for the U-turn between rows
-PARK = 2.4    # pause at the end (tiles regrow here) before the loop restarts
+PARK = 3.2    # pause at the end (tiles regrow here) before the loop restarts
 OVERSHOOT = 16  # how far the bike rides past the first/last tile before turning
 
 LEVELS = {
@@ -83,9 +84,29 @@ def demo_grid():
     return grid, 321
 
 
+def smoke():
+    """Exhaust puffs streaming out behind the bike (bike-local coordinates, rear = -x)."""
+    n, dur = 7, 1.0
+    out = []
+    for i in range(n):
+        begin = i * dur / n
+        dy = 2.4 if i % 2 else -2.4
+        a = f'dur="{dur}s" begin="{begin:.2f}s" repeatCount="indefinite"'
+        out.append(
+            f'<circle cx="-15" cy="0" r="1.5" fill="#ffb066" opacity="0">'
+            f'<animate attributeName="cx" values="-15;-48" {a}/>'
+            f'<animate attributeName="cy" values="0;{dy}" {a}/>'
+            f'<animate attributeName="r" values="1.5;5.5" {a}/>'
+            f'<animate attributeName="opacity" values="0.75;0" {a}/>'
+            f'<animate attributeName="fill" values="#ffb066;#9a8aa8" {a}/></circle>'
+        )
+    return "\n    ".join(out)
+
+
 def bike_art():
     """Top-down motorcycle, centered on (0,0), facing right (+x)."""
     return f"""
+    {smoke()}
     <polygon points="12,0 32,-10 32,10" fill="#ffd9a0" opacity="0.2"/>
     <rect x="-13" y="-2.3" width="6.5" height="4.6" rx="2.2" fill="#2a2036" stroke="{TEXT}" stroke-width="1"/>
     <rect x="6.5" y="-1.9" width="6" height="3.8" rx="1.9" fill="#2a2036" stroke="{TEXT}" stroke-width="1"/>
@@ -103,6 +124,7 @@ def bike_art():
 
 def build_svg(grid, total):
     weeks = len(grid)
+    active = sum(1 for col in grid for l in col if l)
     width = PAD_X * 2 + weeks * PITCH - GAP
     height = PAD_TOP + 7 * PITCH - GAP + 24
     x_left = PAD_X + CELL / 2 - OVERSHOOT
@@ -136,9 +158,9 @@ def build_svg(grid, total):
 
     # ---- tiles: contribution tiles flash and get "collected" when the bike rides over ----
     d1 = 0.02 / T                      # flash on contact
-    fade = 0.5 / T                     # flash -> collected (empty)
-    regrow_a = (ride_end + 0.5) / T    # tiles regrow while the bike is parked
-    regrow_b = (ride_end + 1.7) / T
+    fade = 1.1 / T                     # flash -> ember -> collected (empty)
+    regrow_a = (ride_end + 1.3) / T    # tiles regrow while the bike is parked
+    regrow_b = (ride_end + 2.5) / T
     tiles = []
     for w, col in enumerate(grid):
         for d, lvl in enumerate(col):
@@ -153,8 +175,8 @@ def build_svg(grid, total):
                 continue
             t_row, xa = row_info[d]
             p = (t_row + abs((x + CELL / 2) - xa) / SPEED) / T
-            keys = [0, p, p + d1, p + fade, regrow_a, regrow_b, 1]
-            vals = [base, base, FLASH, EMPTY, EMPTY, base, base]
+            keys = [0, p, p + d1, p + fade * 0.4, p + fade, regrow_a, regrow_b, 1]
+            vals = [base, base, FLASH, EMBER, EMPTY, EMPTY, base, base]
             tiles.append(
                 head + f'><animate attributeName="fill" dur="{T:.2f}s" repeatCount="indefinite" '
                 f'keyTimes="{";".join(f"{k:.5f}" for k in keys)}" values="{";".join(vals)}"/></rect>'
@@ -166,7 +188,7 @@ def build_svg(grid, total):
 <style>text {{ font-family: 'Fira Code', ui-monospace, Menlo, Consolas, monospace; }}</style>
 <rect width="{width}" height="{height}" rx="10" fill="{BG}"/>
 <text x="{PAD_X}" y="27" font-size="13" font-weight="700" fill="{ORANGE}">&gt; ride --contributions</text>
-<text x="{width - PAD_X}" y="27" font-size="12" fill="{TEXT}" text-anchor="end">{total} in the last year</text>
+<text x="{width - PAD_X}" y="27" font-size="12" fill="{TEXT}" text-anchor="end">{total} contributions · {active} active days</text>
 {chr(10).join(tiles)}
 <g transform="translate({start_x:.1f},{start_y:.1f})">
   <animateTransform attributeName="transform" type="translate" calcMode="linear" dur="{T:.2f}s" repeatCount="indefinite"
