@@ -373,6 +373,7 @@
 <rect x="856" y="92" width="12" height="12" rx="2.5" fill="#17111f"/>
 <rect x="856" y="108" width="12" height="12" rx="2.5" fill="#ff8a3d"><animate attributeName="fill" dur="31.70s" repeatCount="indefinite" keyTimes="0.00000;0.63512;0.63575;0.64900;0.66982;0.94006;0.97792;1.00000" values="#ff8a3d;#ff8a3d;#fff1d9;#c2531f;#17111f;#17111f;#ff8a3d;#ff8a3d"/></rect>
 <rect x="856" y="124" width="12" height="12" rx="2.5" fill="#17111f"/>
+<rect x="856" y="140" width="12" height="12" rx="2.5" fill="#17111f"/>
 <g transform="translate(14.0,50.0)">
   <animateTransform attributeName="transform" type="translate" calcMode="linear" dur="31.70s" repeatCount="indefinite"
     keyTimes="0.00000;0.11356;0.13091;0.24448;0.26183;0.37539;0.39274;0.50631;0.52366;0.63722;0.65457;0.76814;0.78549;0.89905;1" values="14.0 50.0;878.0 50.0;878.0 66.0;14.0 66.0;14.0 82.0;878.0 82.0;878.0 98.0;14.0 98.0;14.0 114.0;878.0 114.0;878.0 130.0;14.0 130.0;14.0 146.0;878.0 146.0;878.0 146.0"/>
